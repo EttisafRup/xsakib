@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+
+* {
+    top: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#break {
+    margin-top: 2rem;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Hamburger Button */
+.container {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 1rem 2rem;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 3.5rem;
+    height: 0.5rem;
+    background: linear-gradient(-240deg, #59ff00, #0015ff, #ff0000, #7b00ff);
+    margin: 0.6rem 0;
+    transition: 0.4s;
+    box-shadow: 0 0 0.5rem black;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.9rem, 0.6rem);
+    transform: rotate(-45deg) translate(-0.9rem, 0.6rem);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.8rem, -0.8rem);
+    transform: rotate(45deg) translate(-0.8rem, -0.8rem);
+}
+
+/* Navigation customization */
+nav {
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+}
+
+nav ul {
+    display: flex;
+    float: right;
+    transition: 0.5s;
+}
+
+nav li {
+    list-style: none;
+    font-size: 1.8rem;
+    padding: 2rem 1.8rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav li:hover {
+    text-shadow: 0 0 0.4rem white;
+}
+
+.sakibBhai {
+    float: left;
+    margin: 0.5rem 3rem;
+    transition: 0.5s;
+
+}
+
+.sakibBhai img {
+    height: 5rem;
+    border-radius: 100%;
+}
+
+@media (max-width: 733px) {
+    .container{
+        z-index: 2;
+        display: block;
+    }
+    nav ul {
+        z-index: 1;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(-45deg, #371988, #3c5ee7, #3394b7, #186ed8);
+        background-position: 400%;
+        padding: 0;
+        margin: 0;
+        transition: 0.7s !important;
+        box-shadow: 0 0 0.5rem black;
+    }
+
+    .sakibBhai {
+        float: none;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hide {
+        margin-top: -50rem;
+    }
+}
+
+/* Section edit */
+
+.mainHeader {
+    background: linear-gradient(-45deg, #ffffff, #3c5ee7, #3394b7, #fffefe);
+    background-size: 100% 170%;
+    padding: 5rem 0rem;
+    margin: 8rem 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid white;
+    box-shadow: 1rem 0.7rem 2rem black;
+    border-image: linear-gradient(0deg, #ff0, #f0f);
+    border-image-slice: 1;
+    animation: bordering 2s linear infinite alternate;
+    transition: 0.4s;
+}
+
+
+@keyframes bordering {
+    0% {
+        border-image: linear-gradient(0deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+        border-image-slice: 1;
+    }
+
+    25% {
+        border-image: linear-gradient(90deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+        border-image-slice: 1;
+    }
+
+    50% {
+        border-image: linear-gradient(180deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+        border-image-slice: 1;
+    }
+
+    75% {
+        border-image: linear-gradient(270deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+        border-image-slice: 1;
+    }
+
+    100% {
+        border-image: linear-gradient(360deg, #ee7752, #3c5ee7, #3394b7, #23d5ab);
+        border-image-slice: 1;
+    }
+}
+
+.mainHeader img {
+    height: 20rem;
+    border-radius: 2rem;
+}
+
+.mainHeader h1 {
+    margin: 1.5rem 0rem;
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+}
+
+.mainHeader h4 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.typed {
+    border-bottom: 0.2rem solid red;
+}
+
+.mainHeader button {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 3rem 0rem;
+    padding: 1.4rem;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: -0.2rem 0.2rem 0.5rem 0 black;
+    border-radius: 5rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.mainHeader button:hover {
+    font-size: 2.1rem;
+    text-shadow: 0 0 0.5rem white;
+    box-shadow: 0.4rem 0.4rem 0.7rem 0 black;
+
+}
+
+.socialLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    letter-spacing: 2rem;
+    transition: 0.2s;
+}
+
+.socialLinks a:hover {
+    font-size: 4rem;
+    text-shadow: 0 0 0.6rem white;
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 450px) {
+    html{
+        font-size: 45%;
+    }
+}
+@media (max-width: 400px) {
+    html{
+        font-size: 40%;
+    }
+    .mainHeader{
+        padding: 10rem 0rem;
+    }
+}
+@media (max-width: 360px) {
+    html{
+        font-size: 40%;
+    }
+    .mainHeader{
+        padding: 12rem 0rem;
+    }
+
+}
+@media (max-width: 330px) {
+    html{
+        font-size: 38%;
+    }
+    .mainHeader{
+        padding: 10rem 0rem;
+        margin: 12rem 1rem;
+    }
+}
+@media (max-width: 300px) {
+    html{
+        font-size: 34%;
+    }
+    nav li{
+        font-size: 3rem;
+        margin: 1rem 0rem;
+    }
+    .mainHeader{
+        padding: 13rem 0rem;
+        margin: 12rem 1rem;
+    }
+}
+@media (max-width: 270px) {
+    html{
+        font-size: 30%;
+    }
+    nav li{
+        font-size: 3rem;
+        margin: 1rem 0rem;
+    }
+    .mainHeader{
+        padding: 13rem 0rem;
+        margin: 12rem 1rem;
+    }
+}
+@media (max-width: 240px) {
+    html{
+        font-size: 25%;
+    }
+    nav li{
+        font-size: 3rem;
+        margin: 1rem 0rem;
+    }
+    .mainHeader{
+        margin: 20rem 1rem;
+        padding: 18rem 0rem;
+    }
+}@media (max-width: 220px) {
+    html{
+        font-size: 23%;
+    }
+    nav li{
+        font-size: 3rem;
+        margin: 1rem 0rem;
+    }
+    .mainHeader{
+        margin: 25rem 1rem;
+        padding: 18rem 0rem;
+    }
+}
