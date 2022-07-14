@@ -46,7 +46,7 @@ body {
 .bar1, .bar2, .bar3 {
     width: 3.5rem;
     height: 0.5rem;
-    background: linear-gradient(-240deg, #59ff00, #0015ff, #ff0000, #7b00ff);
+    background: linear-gradient(-240deg, #ffffff, #ff0000, #ffffff);
     margin: 0.6rem 0;
     transition: 0.4s;
     box-shadow: 0 0 0.5rem black;
@@ -131,15 +131,16 @@ nav li:hover {
     }
 
     .hide {
-        margin-top: -50rem;
+        margin-top: -40rem;
     }
 }
 
 /* Section edit */
 
 .mainHeader {
-    background: linear-gradient(-45deg, #ffffff, #3c5ee7, #3394b7, #fffefe);
-    background-size: 100% 170%;
+    background: linear-gradient(#d2e038, #3394b7,#3c5ee7, #3394b7, #186ed8);
+    animation: gradient 1s ease infinite alternate;
+    background-size: 100%;
     padding: 5rem 0rem;
     margin: 8rem 1.5rem;
     color: white;
